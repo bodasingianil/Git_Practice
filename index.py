@@ -15,3 +15,7 @@ def calculate_area(length, width):
 def add(length, width):
     perimeter = 2 * (length + width)
     return perimeter
+
+def subtract(length, width):
+    difference = length - width
+    return difference
