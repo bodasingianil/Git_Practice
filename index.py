@@ -21,3 +21,6 @@ def add(length, width):
 def subtract(length, width):
     difference = length - width
     return difference
+
+def feature():
+    print("Created feature branch")
