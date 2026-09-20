@@ -1,5 +1,5 @@
-username = input("Enter username: ")
-password = input("Enter password: ")
+username = "AnilB"
+password = "Nandan@123"
 
 print(f"Username: {username}")
 print(f"Password: {password}")
