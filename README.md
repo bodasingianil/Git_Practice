@@ -1,5 +1,6 @@
 # Git_Practice
 
+
 1) git init on parent folder
 2) Created home.py index.py and source.py files
 3) git add .
@@ -72,6 +73,7 @@
 	Here: Created anil-feature on github 
 27) update files in local repo and commit 
 28) git checkout main  ==> Switched to branch 'main'
-29) git merge origin/anil-feature  ==> merging origin branch with anil-feature branch in github
-
-	
+29) git merge origin/anil-feature  ==> merging origin branch with anil-feature branch in local
+30) git status
+	Your branch is ahead of 'origin/main' by 3 commits.
+	(use "git push" to publish your local commits) ==> github
