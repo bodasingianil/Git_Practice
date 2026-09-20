@@ -11,3 +11,7 @@ def greet(name):
 def calculate_area(length, width):
     area = length * width
     return area
+
+def add(length, width):
+    perimeter = 2 * (length + width)
+    return perimeter
