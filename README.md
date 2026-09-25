@@ -169,3 +169,92 @@ For example, Git may report:
 Your branch is ahead of 'origin/main' by 3 commits.
 (use "git push" to publish your local commits)
 ```
+
+## Useful Git Commands and Notes
+
+### 31) Push after merging
+
+After merging the feature branch into `main`, push the updated branch to GitHub so the remote repository also includes the latest changes:
+
+```bash
+git push origin main
+```
+
+This is important after a merge to make the changes available to others.
+
+### 32) Merge vs. Rebase
+
+#### Merge
+
+`git merge` combines the histories of two branches and creates a merge commit. It is a safe and common option, especially when working with shared branches.
+
+```bash
+git merge <branch-name>
+```
+
+#### Rebase
+
+`git rebase` moves the current branch's commits on top of another branch, creating a cleaner, more linear commit history. It is useful when you want the branch to appear as if it was built on the latest changes.
+
+```bash
+git rebase <branch-name>
+```
+
+Example:
+
+```bash
+git rebase main
+```
+
+In short:
+
+- Merge keeps both branch histories together and is safer for shared work.
+- Rebase keeps a cleaner linear history but rewrites commit history, so it should be used carefully.
+
+### 33) `git commit -a -m "msg"`
+
+The `-a` flag tells Git to automatically stage all modified tracked files before creating the commit. It is similar to running `git add .` for files that are already being tracked.
+
+```bash
+git commit -a -m "your commit message"
+```
+
+> Note: This does not include new untracked files. For those, you still need `git add`.
+
+### 34) `git stash`
+
+`git stash` temporarily saves your current in-progress changes so you can switch branches, pull updates, or work on something else without losing your work.
+
+```bash
+git stash
+```
+
+This is useful when you need to pause current work temporarily.
+
+### 35) `git pull`
+
+`git pull` downloads the latest changes from the remote repository and merges them into your current branch.
+
+```bash
+git pull origin main
+```
+
+This keeps your local branch updated with the latest team changes.
+
+### 36) `git stash apply`
+
+`git stash apply` restores the most recently stashed changes without removing them from the stash list.
+
+```bash
+git stash apply
+```
+
+This is useful after pulling changes or switching branches, when you want to recover your saved work again.
+
+If you want to apply the stash and remove it from the stash list at the same time, you can use:
+
+```bash
+git stash pop
+```
+
+`git stash apply` is a safer option if you want to keep the stash available for later use.
